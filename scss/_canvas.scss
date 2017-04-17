@@ -1,0 +1,16 @@
+#canvasHover, #canvas {
+  box-shadow: 1px 1px 0px 1px black;
+  cursor: crosshair;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+#canvasHover {
+  z-index: 99;
+}
+
+#canvasWrapper {
+  margin: 0 auto;
+  position: relative;
+}

@@ -1,0 +1,29 @@
+#metaBar {
+  background-color: white;
+  box-shadow: 1px 1px 0px 1px black;
+  border: 2px solid black;
+  font-size: .8em;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin: 5px;
+  padding: .5em;
+  text-align: left;
+  z-index: 1500;
+  transition: border 0.3s linear;
+    -webkit-transition: border 0.3s linear;
+    -moz-transition: border 0.3s linear;
+    -o-transition: border 0.3s linear;
+    -ms-transition: border 0.3s linear;
+
+  & > div > span {
+    font-weight: 400;
+    opacity: 1;
+    transition:opacity 0.5s linear;
+      -webkit-transition:opacity 0.5s linear;
+      -moz-transition:opacity 0.5s linear;
+      -o-transition:opacity 0.5s linear;
+      -ms-transition:opacity 0.5s linear;
+  }
+
+}
+

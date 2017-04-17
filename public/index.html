@@ -1,0 +1,32 @@
+<!doctype html>
+
+<meta charset="utf-8">
+<title>¿?› ⁄Ɍ⁄ῬȽȺȻɆ ‹?¿</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+<link rel="stylesheet" href="main.css" />
+
+<div id="overlay"></div>
+<section id="palettes" data-modal-id="palettes"></section>
+
+<header id="topBar">
+  <section id="metaBar">
+    <div id="mb-users">User Count: <span id="mb-users-val"></span></div>
+    <div id="mb-placed">Placed by You: <span id="mb-placed-val"></span></div>
+    <div id="mb-others">Placed by Others: <span id="mb-others-val"></span></div>
+  </section>
+  <section id="colors"></section>
+  <section id="menu">
+    <button id="zoomOut">-</button>
+    <button id="zoomIn">+</button>
+    <button id="paletteButton" data-modal-open="palettes">Change Palette</button>
+  </section>
+</header>
+
+<section id="canvasWrapper">
+  <canvas id="canvas"></canvas>
+</section>
+
+
+<script src="main.dist.js"></script>

@@ -1,0 +1,12 @@
+node_modules
+bower_components
+.npm
+*.log
+npm-debug.log*
+
+# ignore built files
+*.dist.*
+public/*.css
+
+# don't track any table data
+*.table.data

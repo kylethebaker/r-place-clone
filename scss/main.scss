@@ -1,0 +1,15 @@
+@import "topBar";
+@import "palettes";
+@import "colorPicker";
+@import "canvas";
+@import "metaBar";
+
+body {
+  background: linear-gradient(to bottom, #2c1f2f 0%,#49344e 100%);
+  background-attachment: fixed;
+  height: 100vh;
+  margin: 0;
+  padding: 80px 0;
+  position: relative;
+  text-align: center;
+}
