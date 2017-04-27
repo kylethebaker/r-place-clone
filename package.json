@@ -4,6 +4,9 @@
   "description": "Simple /r/place clone",
   "main": "index.js",
   "scripts": {
+    "build": "npm run build:webpack && npm run build:scss",
+    "build:webpack": "webpack --config webpack.config.js",
+    "build:scss": "node-sass --recursive --output public scss/main.scss",
     "watch": "npm run watch:webpack & npm run watch:scss",
     "watch:webpack": "webpack --watch --config webpack.config.js",
     "watch:scss": "node-sass --watch --recursive --output public scss/main.scss",
