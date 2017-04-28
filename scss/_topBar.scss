@@ -35,6 +35,10 @@
     &:hover {
       background-color: darken(#6e5275, 12);
     }
+
+    &[disabled] {
+      background-color: #aaa;
+    }
   }
 }
 

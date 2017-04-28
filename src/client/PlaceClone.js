@@ -195,22 +195,27 @@ export default class PlaceClone {
    * Zoom the canvas when the buttons are clicked
    */
   registerZoomButtonListeners() {
+    const zoomIn = document.getElementById("zoomIn");
+    const zoomOut = document.getElementById("zoomOut");
     const resize = (event) => {
       let blockSize = this.canvasWrapper.blockSize;
       const bitmap = this.localTable.getBitmap();
       const colors = this.colorPicker.getColors();
-      const direction = event.target.getAttribute("id");
-      if (direction === "zoomIn") {
-        blockSize = (blockSize + 2 >= 25) ? 25 : blockSize + 2
+      const directionBtn = event.target;
+      if (directionBtn.id === "zoomIn") {
+        blockSize = (blockSize + 2 >= 25) ? 25 : blockSize + 2;
       } else {
         blockSize = (blockSize - 2 <= 1) ? 1 : blockSize - 2
       }
+      zoomIn.disabled = (blockSize >= 25)
+      zoomOut.disabled = (blockSize <= 1)
       this.canvasWrapper.rescaleCanvas(bitmap, colors, blockSize)
       .then(() => {
+        console.log("after", blockSize);
         console.log(`Rescaled to a blocksize of ${blockSize}`);
       });
     };
-    document.getElementById("zoomIn").onclick = resize;
-    document.getElementById("zoomOut").onclick = resize;
+    zoomIn.onclick = resize;
+    zoomOut.onclick = resize;
   }
 }
