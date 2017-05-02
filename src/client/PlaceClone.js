@@ -71,7 +71,10 @@ export default class PlaceClone {
       tmpIncomingCache.stopListening();
       tmpIncomingCache.consumeCache().forEach((cachedEvent) => {
         if (cachedEvent.ok) {
-          this.canvasWrapper.fillBlock(...cachedEvent.data);
+          const [bx, by, colorIndex] = cachedEvent.data;
+          const hexColor = this.colorPicker.getRgb(colorIndex);
+          this.localTable.setBlock(bx, by, colorIndex);
+          this.canvasWrapper.fillBlock(bx, by, hexColor);
         }
       });
 
